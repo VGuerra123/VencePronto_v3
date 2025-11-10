@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-white;
+    background-color: #225BE4; /* 🔵 fondo global */
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    letter-spacing: -0.01em;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #225BE4; /* 🔵 evita margen blanco */
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Mantengo tus estilos luxury para coherencia */
+  .luxury-card {
+    @apply bg-[#7A9CEE]/40 border border-white/30 text-white backdrop-blur-xl;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .luxury-card:hover {
+    @apply shadow-xl;
+    transform: translateY(-2px);
+  }
+
+  .input-luxury {
+    @apply w-full px-4 py-3 rounded-lg border border-white/30 bg-white/10 text-white;
+    @apply focus:ring-2 focus:ring-white/70 outline-none transition-all;
+  }
+}
