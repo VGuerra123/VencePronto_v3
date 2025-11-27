@@ -32,7 +32,7 @@ export function WhatsAppNotifications({ onClose }: WhatsAppNotificationsProps) {
   );
   const [loading, setLoading] = useState(true);
 
-  /* 🧠 Simulación de datos locales (sin supabase) */
+  /* 🧠 Simulación de datos locales */
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
